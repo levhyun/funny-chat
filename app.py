@@ -23,9 +23,9 @@ def handle_connect():
 def handle_disconnect():
     for name, sid in users.items():
         if sid == request.sid:
+            del users[name]
             send(f"[STATUS]{users}", broadcast=True)
             send(f"[LEAVE]{name} has left the chat.", broadcast=True)
-            del users[name]
             break
     print("A user disconnected")
 
