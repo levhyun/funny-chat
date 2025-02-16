@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var join = false
     var users
 
-    document.getElementById('name').addEventListener('keydown', function(event) {
+    document.getElementById('name').addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
             username = document.getElementById('name').value;
