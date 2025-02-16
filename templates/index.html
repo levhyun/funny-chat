@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Chat</h2>
+        <div id="chat">
+            <div id="guide-text">
+                <p>Enter your name and join the chat room</p>
+            </div>
+        </div>
+
+        <div id="name-input-container">
+            <input type="text" id="name" placeholder="Enter your name" />
+            <button id="join-btn" class="btn" style="background-color: #454ca0; border: 1px solid #454ca0;">Join</button>
+        </div>
+
+        <div id="chat-container" style="display: none;">
+            <input type="text" id="message" placeholder="Type a message" />
+            <button id="send-btn" class="btn" style="background-color: #45a049; border: 1px solid #45a049;">Send</button>
+        </div>
+    </div> 
+    <div class="extra-box"></div>
+</body>
+</html>
